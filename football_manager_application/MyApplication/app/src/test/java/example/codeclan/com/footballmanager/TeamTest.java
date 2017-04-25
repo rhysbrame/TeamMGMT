@@ -19,4 +19,14 @@ public class TeamTest {
     public void testTeamSetup() {
         assertEquals(TeamTypes.FIRST, newTeam.getTeamType());
     }
+
+    @Test
+    public void testTeamSize() {
+        assertEquals(11, newTeam.getTeamSize());
+    }
+
+    @Test
+    public void testGetTeamForm(){
+        assertEquals(0.00, newTeam.getTeamForm());
+    }
 }
