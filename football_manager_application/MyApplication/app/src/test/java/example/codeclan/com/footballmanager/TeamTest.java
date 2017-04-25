@@ -36,15 +36,3 @@ public class TeamTest {
         assertEquals(0.75, newTeam.getTeamForm());
     }
 }
-
-//    @Test
-//    public void testSetName() {
-//        newClub.setClubName("Swansea City FC");
-//        assertEquals("Swansea City FC", newClub.getClubName());
-//    }
-//
-//    @Test
-//    public void testSetAccount() {
-//        newClub.setClubAccount(15.00);
-//        assertEquals(15.00, newClub.getClubAccount());
-//    }
