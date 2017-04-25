@@ -6,7 +6,7 @@ public class Person {
     private int personAge;
     private Sex sex;
 
-    public Person(String personName, Integer personAge, Sex sex) {
+    public Person(String personName, int personAge, Sex sex) {
         this.personName = personName;
         this.personAge = personAge;
         this.sex = sex;
@@ -20,11 +20,11 @@ public class Person {
         return personName;
     }
 
-    public void setPersonAge(Integer age){
+    public void setPersonAge(int age){
         personAge = age;
     }
 
-    public Integer getPersonAge() {
+    public int getPersonAge() {
         return personAge;
     }
 
