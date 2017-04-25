@@ -3,6 +3,7 @@ package example.codeclan.com.footballmanager;
 import org.junit.Before;
 import org.junit.Test;
 
+import static example.codeclan.com.footballmanager.TeamTypes.*;
 import static junit.framework.Assert.assertEquals;
 
 
@@ -12,12 +13,18 @@ public class TeamTest {
 
     @Before
     public void before() {
-        newTeam = new Team(TeamTypes.FIRST);
+        newTeam = new Team(FIRST);
     }
 
     @Test
     public void testTeamSetup() {
-        assertEquals(TeamTypes.FIRST, newTeam.getTeamType());
+        assertEquals(FIRST, newTeam.getTeamType());
+    }
+
+    @Test
+    public void testSetTeamType() {
+        newTeam.setTeamType(WOMENS);
+        assertEquals(WOMENS, newTeam.getTeamType());
     }
 
     @Test

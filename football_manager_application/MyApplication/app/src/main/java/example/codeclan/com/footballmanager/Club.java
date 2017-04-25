@@ -9,6 +9,8 @@ public class Club {
         this.clubAccount = clubAccount;
     }
 
+    ////////////////////////////////////////////////////
+
     public void setClubName(String name) {
         clubName = name;
     }

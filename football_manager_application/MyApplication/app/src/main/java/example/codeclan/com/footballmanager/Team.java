@@ -1,15 +1,18 @@
 package example.codeclan.com.footballmanager;
 
 public class Team {
-
     private TeamTypes type;
-
     private int teamSize = 11;
     private double teamForm = 0.00;
 
-
     public Team(TeamTypes type){
         this.type = type;
+    }
+
+    /////////////////////////////////////////
+
+    public void setTeamType(TeamTypes teamType) {
+        type = teamType;
     }
 
     public TeamTypes getTeamType() {
