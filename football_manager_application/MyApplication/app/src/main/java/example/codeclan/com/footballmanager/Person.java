@@ -28,21 +28,11 @@ public class Person {
         return personAge;
     }
 
-//    public void setSex
-}
+    public void setSex(Sex sexType) {
+        sex = sexType;
+    }
 
-//    public TeamTypes getTeamType() {
-//        return type;
-//    }
-//
-//    public int getTeamSize(){
-//        return teamSize;
-//    }
-//
-//    public void setTeamForm(double form){
-//        teamForm = form;
-//    }
-//
-//    public double getTeamForm(){
-//        return teamForm;
-//    }
+    public Sex getSex() {
+        return sex;
+    }
+}
