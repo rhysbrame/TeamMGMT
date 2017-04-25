@@ -18,5 +18,9 @@ public class Fan extends Person {
     public double getWallet() {
         return wallet;
     }
+
+    public void buyTicket(int numberOfTickets) {
+        
+    }
 }
 
