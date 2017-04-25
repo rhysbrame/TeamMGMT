@@ -12,13 +12,13 @@ public class ClubTest {
 
     @Before
     public void before(){
-        newClub = new Club("Cardiff City FC", 5000000.00);
+        newClub = new Club("Cardiff City FC", 5.00);
     }
 
     @Test
     public void testClubSetup() {
         assertEquals("Cardiff City FC", newClub.getClubName());
-        assertEquals(5000000.00, newClub.getClubAccount());
+        assertEquals(5.00, newClub.getClubAccount());
     }
 
     @Test
@@ -29,7 +29,7 @@ public class ClubTest {
 
     @Test
     public void testSetAccount() {
-        newClub.setClubAccount(150000000.00);
-        assertEquals(150000000.00, newClub.getClubAccount());
+        newClub.setClubAccount(15.00);
+        assertEquals(15.00, newClub.getClubAccount());
     }
 }
