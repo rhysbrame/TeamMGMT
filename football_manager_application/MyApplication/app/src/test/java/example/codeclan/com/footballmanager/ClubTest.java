@@ -21,5 +21,15 @@ public class ClubTest {
         assertEquals(5000000.00, newClub.getClubAccount());
     }
 
-    
+    @Test
+    public void testSetName() {
+        newClub.setClubName("Swansea City FC");
+        assertEquals("Swansea City FC", newClub.getClubName());
+    }
+
+    @Test
+    public void testSetAccount() {
+        newClub.setClubAccount(150000000.00);
+        assertEquals(150000000.00, newClub.getClubAccount());
+    }
 }
