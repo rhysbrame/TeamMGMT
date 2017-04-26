@@ -7,10 +7,12 @@ public class Team {
     private int teamSize = 11;
     private double teamForm = 0.00;
     private ArrayList<Player> teamSheet;
+    private ArrayList<Manager> coachingStaff;
 
     public Team(TeamTypes type){
         this.type = type;
         this.teamSheet = new ArrayList<>();
+        this.coachingStaff = new ArrayList<>();
     }
 
     public void setTeamType(TeamTypes teamType) {
@@ -47,5 +49,21 @@ public class Team {
 
     public boolean checkTeamFull() {
         return teamSheet.size() == teamSize;
+    }
+
+    public void addManagerToCoachingStaff(Manager manager) {
+        coachingStaff.add(manager);
+    }
+
+    public boolean sackManager(double managerForm) {
+        if (managerForm <= 0.15) {
+            coachingStaff.remove(0);
+            return true;
+        }
+        return false;
+    }
+
+    public int getCoachingStaffSize() {
+        return coachingStaff.size();
     }
 }

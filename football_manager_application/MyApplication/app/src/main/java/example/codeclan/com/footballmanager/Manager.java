@@ -1,13 +1,12 @@
 package example.codeclan.com.footballmanager;
 
-public class Manager extends Person {
+import java.util.ArrayList;
 
+public class Manager extends Person {
     private double managerForm;
 
     public Manager(String personName, int personAge, Sex sex, double managerForm) {
-
         super(personName, personAge, sex);
-
         this.managerForm = managerForm;
     }
 
@@ -18,4 +17,5 @@ public class Manager extends Person {
     public double getManagerForm() {
         return managerForm;
     }
+
 }

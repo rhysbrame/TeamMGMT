@@ -38,9 +38,11 @@ public class FanTest {
 
     @Test
     public void testBuyTicket() {
+        newFan.setWallet(20.00);
         newStadium = new Stadium("Home", 15000, 25.00);
         double ticketPrice = newStadium.getTicketPrice();
-        newFan.buyTicket(2, ticketPrice);
-        assertEquals(50.00, newFan.getWallet());
+        boolean result = newFan.buyTicket(2, ticketPrice);
+        assertEquals(20.00, newFan.getWallet());
+        assertEquals(false, result);
     }
 }

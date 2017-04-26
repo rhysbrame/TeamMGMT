@@ -12,6 +12,7 @@ public class TeamTest {
 
     Team newTeam;
     Player newPlayer;
+    Manager newManager;
 
     @Before
     public void before() {
@@ -28,7 +29,7 @@ public class TeamTest {
         newPlayer = new Player("Player10", 27, FEMALE, 19, 3, 0.38);
         newPlayer = new Player("Player11", 28, FEMALE, 20, 2, 0.73);
         newPlayer = new Player("Player12", 29, FEMALE, 21, 1, 0.34);
-
+        newManager = new Manager("Manager1", 50, OTHER, 0.20);
     }
 
     @Test
@@ -87,6 +88,23 @@ public class TeamTest {
         newTeam.addPlayerToTeamSheet(newPlayer);
         newTeam.addPlayerToTeamSheet(newPlayer);
         assertEquals(true, newTeam.checkTeamFull());
+    }
+
+    @Test
+    public void testCoachingStaffSize() {
+        assertEquals(0, newTeam.getCoachingStaffSize());
+    }
+
+    @Test
+    public void testAddManagerToCoachingStaff() {
+        newTeam.addManagerToCoachingStaff(newManager);
+        assertEquals(1, newTeam.getCoachingStaffSize());
+    }
+
+    @Test
+    public void testSackManager() {
+        newTeam.addManagerToCoachingStaff(newManager);
+        assertEquals(true, newTeam.sackManager(0.00));
     }
 
 }

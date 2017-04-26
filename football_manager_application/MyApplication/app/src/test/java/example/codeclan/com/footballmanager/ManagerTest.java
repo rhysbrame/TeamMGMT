@@ -34,4 +34,6 @@ public class ManagerTest {
         newManager.setPersonName("Rhys Brame");
         assertEquals("Rhys Brame", newManager.getPersonName());
     }
+
+
 }

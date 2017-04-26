@@ -38,4 +38,5 @@ public class StadiumTest {
         newStadium.setTicketPrice(29.00);
         assertEquals(29.00, newStadium.getTicketPrice());
     }
+
 }

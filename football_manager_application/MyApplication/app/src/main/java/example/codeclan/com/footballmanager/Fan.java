@@ -17,11 +17,13 @@ public class Fan extends Person {
         return wallet;
     }
 
-    public void buyTicket(int numberOfTickets, double ticketPrice) {
+    public boolean buyTicket(int numberOfTickets, double ticketPrice) {
         double amountToDeduct = ticketPrice * numberOfTickets;
-        double less = getWallet() - amountToDeduct;
-        setWallet(less);
+        if (getWallet() >= amountToDeduct) {
+            double less = getWallet() - amountToDeduct;
+            setWallet(less);
+            return true;
+        }
+        return false;
     }
 }
-
-//        if getWallet() >= stadium.getTicketPrice() {

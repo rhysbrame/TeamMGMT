@@ -9,8 +9,6 @@ public class Club {
         this.clubAccount = clubAccount;
     }
 
-    ////////////////////////////////////////////////////
-
     public void setClubName(String name) {
         clubName = name;
     }
@@ -25,5 +23,13 @@ public class Club {
 
     public double getClubAccount() {
         return clubAccount;
+    }
+
+    public void sellTicket (int attendance, double ticketPrice) {
+        double matchDaySales = attendance * ticketPrice;
+        System.out.println(matchDaySales);
+        double toAdd = getClubAccount() + matchDaySales;
+        System.out.println(toAdd);
+        setClubAccount(toAdd);
     }
 }
