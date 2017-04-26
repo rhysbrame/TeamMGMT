@@ -22,23 +22,22 @@ public class PlayerStatsTest {
     }
 
     @Test
-    public void testSetPlayerCaps() {
-        newPlayerStats.setPlayerCaps(19);
+    public void testAddPlayerCaps() {
+        newPlayerStats.addPlayerCaps(1);
         assertEquals(19, newPlayerStats.getPlayerCaps());
     }
 
     @Test
-    public void testSetPlayerGoals() {
+    public void testAddPlayerGoals() {
         newPlayerStats.addPlayerGoals(3);
         assertEquals(15, newPlayerStats.getPlayerGoals());
     }
 
     @Test
-    public void testSetPlayerPoints() {
-        newPlayerStats.setPlayerPoints(13);
+    public void testAddPlayerPoints() {
+        newPlayerStats.addPlayerPoints(3);
         assertEquals(13, newPlayerStats.getPlayerPoints());
     }
-
 
     @Test
     public void testWorkOutPlayerForm() {

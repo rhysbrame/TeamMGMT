@@ -1,10 +1,9 @@
 package example.codeclan.com.footballmanager;
 
 public class PlayerStats {
-    private int playerCaps;
-    private int playerGoals;
-    private int playerPoints;
-    private double playerForm;
+    private int playerCaps = 0;
+    private int playerGoals = 0;
+    private int playerPoints = 0;
 
     public PlayerStats(int playerCaps, int playerGoals, int playerPoints) {
         this.playerCaps = playerCaps;
@@ -12,8 +11,8 @@ public class PlayerStats {
         this.playerPoints = playerPoints;
     }
 
-    public void setPlayerCaps(int caps) {
-        playerCaps = caps;
+    public void addPlayerCaps(int capsToAdd) {
+        playerCaps += capsToAdd;
     }
 
     public int getPlayerCaps() {
@@ -28,28 +27,16 @@ public class PlayerStats {
         return playerGoals;
     }
 
-    public void setPlayerPoints(int points) {
-        playerPoints = points;
+    public void addPlayerPoints(int pointsToAdd) {
+        playerPoints += pointsToAdd;
     }
 
     public int getPlayerPoints() {
         return playerPoints;
     }
 
-    public void setPlayerForm(double form) {
-        playerForm = form;
-    }
-
-    public double getPlayerForm() {
-        return playerForm;
-    }
-
-    //* the formula for this is playerpoints divided by player caps. 1 is perfect and 0 is poor.
-
     public double workOutPlayerForm() {
-        int playerPoints = getPlayerPoints();
-        int caps = getPlayerCaps() * 3;
-        double form = playerPoints / (double) caps;
+        double form = getPlayerPoints() / ((double) getPlayerCaps() * 3);
         return form;
     }
 }
