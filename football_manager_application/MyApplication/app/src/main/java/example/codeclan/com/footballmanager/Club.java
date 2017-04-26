@@ -27,9 +27,7 @@ public class Club {
 
     public void sellTicket (int attendance, double ticketPrice) {
         double matchDaySales = attendance * ticketPrice;
-        System.out.println(matchDaySales);
         double toAdd = getClubAccount() + matchDaySales;
-        System.out.println(toAdd);
         setClubAccount(toAdd);
     }
 }

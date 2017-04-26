@@ -6,7 +6,12 @@ public class Player extends Person {
     private int playerGoals;
     private double playerForm;
 
-    public Player(String personName, int personAge, Sex sex, int playerCaps, int playerGoals, double playerForm) {
+    public Player(String personName,
+                  int personAge,
+                  Sex sex,
+                  int playerCaps,
+                  int playerGoals,
+                  double playerForm) {
 
         super(personName, personAge, sex);
 
@@ -38,7 +43,4 @@ public class Player extends Person {
     public double getPlayerForm() {
         return playerForm;
     }
-
-
-
 }
