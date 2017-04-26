@@ -6,12 +6,10 @@ public class PlayerStats {
     private int playerPoints;
     private double playerForm;
 
-    public PlayerStats(int playerCaps, int playerGoals, int playerPoints, double playerForm) {
-
+    public PlayerStats(int playerCaps, int playerGoals, int playerPoints) {
         this.playerCaps = playerCaps;
         this.playerGoals = playerGoals;
         this.playerPoints = playerPoints;
-        this.playerForm = playerForm;
     }
 
     public void setPlayerCaps(int caps) {
@@ -22,8 +20,8 @@ public class PlayerStats {
         return playerCaps;
     }
 
-    public void setPlayerGoals(int goals) {
-        playerGoals = goals;
+    public void addPlayerGoals(int goalsToAdd) {
+        playerGoals += goalsToAdd;
     }
 
     public int getPlayerGoals() {
@@ -44,5 +42,14 @@ public class PlayerStats {
 
     public double getPlayerForm() {
         return playerForm;
+    }
+
+    //* the formula for this is playerpoints divided by player caps. 1 is perfect and 0 is poor.
+
+    public double workOutPlayerForm() {
+        int playerPoints = getPlayerPoints();
+        int caps = getPlayerCaps() * 3;
+        double form = playerPoints / (double) caps;
+        return form;
     }
 }

@@ -9,10 +9,12 @@ import static junit.framework.Assert.assertEquals;
 public class PlayerTest {
     
     Player newPlayer;
+    PlayerStats playerStats;
     
     @Before
     public void before() {
-        newPlayer = new Player("Kenneth Zohore", 25, MALE);
+        playerStats = new PlayerStats(18, 12, 10);
+        newPlayer = new Player("Kenneth Zohore", 25, MALE, playerStats);
         
     }
 

@@ -37,7 +37,17 @@ public class FanTest {
     }
 
     @Test
-    public void testBuyTicket() {
+    public void testCanBuyTicket() {
+        newFan.setWallet(150.00);
+        newStadium = new Stadium("Home", 45000, 23.00);
+        double ticketPrice = newStadium.getTicketPrice();
+        boolean result = newFan.buyTicket(4, ticketPrice);
+        assertEquals(58.00, newFan.getWallet());
+        assertEquals(true, result);
+    }
+
+    @Test
+    public void testCannotBuyTicket() {
         newFan.setWallet(20.00);
         newStadium = new Stadium("Home", 15000, 25.00);
         double ticketPrice = newStadium.getTicketPrice();

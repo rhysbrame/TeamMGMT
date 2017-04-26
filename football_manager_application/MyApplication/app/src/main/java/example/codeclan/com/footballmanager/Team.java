@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Team {
     private TeamTypes type;
-    private int teamSize = 11;
+
     private double teamForm = 0.00;
     private ArrayList<Player> teamSheet;
     private ArrayList<Manager> coachingStaff;
@@ -21,10 +21,6 @@ public class Team {
 
     public TeamTypes getTeamType() {
         return type;
-    }
-
-    public int getTeamSize(){
-        return teamSize;
     }
 
     public void setTeamForm(double form){
@@ -48,7 +44,7 @@ public class Team {
     }
 
     public boolean checkTeamFull() {
-        return teamSheet.size() == teamSize;
+        return teamSheet.size() == 11;
     }
 
     public void addManagerToCoachingStaff(Manager manager) {

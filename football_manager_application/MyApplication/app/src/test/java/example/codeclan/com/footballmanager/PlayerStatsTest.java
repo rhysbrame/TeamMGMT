@@ -11,7 +11,7 @@ public class PlayerStatsTest {
 
     @Before
     public void before() {
-        newPlayerStats = new PlayerStats(18, 12, 10, 0.66);
+        newPlayerStats = new PlayerStats(18, 12, 10);
     }
 
     @Test
@@ -19,7 +19,6 @@ public class PlayerStatsTest {
         assertEquals(18,  newPlayerStats.getPlayerCaps());
         assertEquals(12,  newPlayerStats.getPlayerGoals());
         assertEquals(10, newPlayerStats.getPlayerPoints());
-        assertEquals(0.66,  newPlayerStats.getPlayerForm());
     }
 
     @Test
@@ -30,7 +29,7 @@ public class PlayerStatsTest {
 
     @Test
     public void testSetPlayerGoals() {
-        newPlayerStats.setPlayerGoals(15);
+        newPlayerStats.addPlayerGoals(3);
         assertEquals(15, newPlayerStats.getPlayerGoals());
     }
 
@@ -40,9 +39,11 @@ public class PlayerStatsTest {
         assertEquals(13, newPlayerStats.getPlayerPoints());
     }
 
+
     @Test
-    public void testSetPlayerForm() {
-        newPlayerStats.setPlayerForm(0.70);
-        assertEquals(0.70, newPlayerStats.getPlayerForm());
+    public void testWorkOutPlayerForm() {
+        newPlayerStats = new PlayerStats(5, 0, 10);
+        newPlayerStats.workOutPlayerForm();
+        assertEquals(0.66, newPlayerStats.workOutPlayerForm(), 0.01);
     }
 }
