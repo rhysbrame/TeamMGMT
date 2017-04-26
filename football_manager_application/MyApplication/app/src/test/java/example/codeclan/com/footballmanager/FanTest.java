@@ -9,6 +9,7 @@ import static junit.framework.Assert.assertEquals;
 public class FanTest {
 
     Fan newFan;
+    Stadium newStadium;
 
     @Before
     public void before() {
@@ -33,5 +34,13 @@ public class FanTest {
     public void testSetSex() {
         newFan.setSex(OTHER);
         assertEquals(OTHER, newFan.getSex());
+    }
+
+    @Test
+    public void testBuyTicket() {
+        newStadium = new Stadium("Home", 15000, 25.00);
+        double ticketPrice = newStadium.getTicketPrice();
+        newFan.buyTicket(2, ticketPrice);
+        assertEquals(50.00, newFan.getWallet());
     }
 }

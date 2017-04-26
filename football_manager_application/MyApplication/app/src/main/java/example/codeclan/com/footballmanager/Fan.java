@@ -5,9 +5,7 @@ public class Fan extends Person {
     private double wallet;
 
     public Fan(String personName, int personAge, Sex sex, double wallet) {
-
         super (personName, personAge, sex);
-
         this.wallet = wallet;
     }
 
@@ -19,8 +17,11 @@ public class Fan extends Person {
         return wallet;
     }
 
-    public void buyTicket(int numberOfTickets) {
-        
+    public void buyTicket(int numberOfTickets, double ticketPrice) {
+        double amountToDeduct = ticketPrice * numberOfTickets;
+        double less = getWallet() - amountToDeduct;
+        setWallet(less);
     }
 }
 
+//        if getWallet() >= stadium.getTicketPrice() {
